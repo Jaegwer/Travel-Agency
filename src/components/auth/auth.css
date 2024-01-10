@@ -1,0 +1,7 @@
+body{
+	background-image: url("../../assets/images/travel.jpeg");
+	background-size: cover;
+}
+.card{
+	backdrop-filter: blur(10px);
+}

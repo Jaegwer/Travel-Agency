@@ -1,0 +1,5 @@
+body{
+	background-image: none;
+	background-color: rgba(17, 24, 39, 1);
+	isolation: isolate;
+}
