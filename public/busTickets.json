@@ -1,0 +1,63 @@
+{
+	"busTickets": [
+		{
+			"id": "1",
+			"company": "Awesome Travel Co.",
+			"departure": "Istanbul",
+			"arrival": "Ankara",
+			"date": "2024-01-15",
+			"busNumber": "BUS123",
+			"price": 30.00,
+			"availableSeats": 25,
+			"amenities": [
+				"WiFi",
+				"AC",
+				"Power Outlets"
+			]
+		},
+		{
+			"id": "2",
+			"company": "Express Transit",
+			"departure": "Ankara",
+			"arrival": "Izmir",
+			"date": "2024-01-15",
+			"busNumber": "BUS456",
+			"price": 25.00,
+			"availableSeats": 20,
+			"amenities": [
+				"WiFi",
+				"AC"
+			]
+		},
+		{
+			"id": "3",
+			"company": "City Connect Bus Lines",
+			"departure": "Izmir",
+			"arrival": "Istanbul",
+			"date": "2024-01-16",
+			"busNumber": "BUS789",
+			"price": 35.00,
+			"availableSeats": 15,
+			"amenities": [
+				"WiFi",
+				"AC",
+				"Restroom"
+			]
+		},
+		{
+			"id": "4",
+			"company": "Fast Commute",
+			"departure": "Istanbul",
+			"arrival": "Antalya",
+			"date": "2024-01-16",
+			"busNumber": "BUS321",
+			"price": 40.00,
+			"availableSeats": 10,
+			"amenities": [
+				"WiFi",
+				"AC",
+				"USB Charging"
+			]
+		}
+	]
+}

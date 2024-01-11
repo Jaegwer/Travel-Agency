@@ -29,9 +29,9 @@ const SignUpPage: React.FC = () => {
     setSelectedGender(genderId);
   };
   return (
-    <div className="w-1/2 mx-auto card flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
-      <form onSubmit={handleSubmit}>
-        <div className="space-y-12">
+    <div className="w-1/2 mx-auto  flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 auth">
+      <form className="card" onSubmit={handleSubmit}>
+        <div className="space-y-12 ">
           <div className="border-b border-white/10 pb-12">
             <h2 className="text-base font-semibold leading-7 text-gray-700">
               Personal Information

@@ -6,6 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import Firebase from "./Firebase";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 firebase.initializeApp(Firebase);
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -13,6 +15,7 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <App />
+	<ToastContainer />
   </React.StrictMode>
 );
 reportWebVitals();
