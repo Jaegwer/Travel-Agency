@@ -8,7 +8,19 @@
 			"date": "2024-01-15",
 			"busNumber": "BUS123",
 			"price": 30.00,
-			"availableSeats": 25,
+			"availableSeats": 3,
+			"seatsLayout":[
+				{ "seat_number": 1, "gender": "female" },
+				{ "seat_number": 2, "gender": "", "is_female_only":true },
+				{ "seat_number": 3, "gender": "female" },
+				{ "seat_number": 4, "gender": "female" },
+				{ "seat_number": 5, "gender": "male" },
+				{ "seat_number": 6, "gender": "male" },
+				{ "seat_number": 7, "gender": "", "is_female_only":false },
+				{ "seat_number": 8, "gender": "male" },
+				{ "seat_number": 9, "gender": "female" },
+				{ "seat_number": 10, "gender": "", "is_female_only":true }
+			],
 			"amenities": [
 				"WiFi",
 				"AC",
@@ -23,7 +35,19 @@
 			"date": "2024-01-15",
 			"busNumber": "BUS456",
 			"price": 25.00,
-			"availableSeats": 20,
+			"availableSeats": 7,
+			"seatsLayout":[
+				{ "seat_number": 1, "gender": "", "is_female_only":false },
+				{ "seat_number": 2, "gender": "", "is_female_only":false },
+				{ "seat_number": 3, "gender": "female" },
+				{ "seat_number": 4, "gender": "", "is_female_only":true },
+				{ "seat_number": 5, "gender": "", "is_female_only":false },
+				{ "seat_number": 6, "gender": "", "is_female_only":false },
+				{ "seat_number": 7, "gender": "", "is_female_only":false },
+				{ "seat_number": 8, "gender": "male" },
+				{ "seat_number": 9, "gender": "female" },
+				{ "seat_number": 10, "gender": "", "is_female_only":true }
+			],
 			"amenities": [
 				"WiFi",
 				"AC"
@@ -37,7 +61,19 @@
 			"date": "2024-01-16",
 			"busNumber": "BUS789",
 			"price": 35.00,
-			"availableSeats": 15,
+			"availableSeats": 6,
+			"seatsLayout":[
+				{ "seat_number": 1, "gender": "", "is_female_only":false },
+				{ "seat_number": 2, "gender": "", "is_female_only":false },
+				{ "seat_number": 3, "gender": "female" },
+				{ "seat_number": 4, "gender": "", "is_female_only":true },
+				{ "seat_number": 5, "gender": "male" },
+				{ "seat_number": 6, "gender": "", "is_female_only":false },
+				{ "seat_number": 7, "gender": "", "is_female_only":false },
+				{ "seat_number": 8, "gender": "male" },
+				{ "seat_number": 9, "gender": "female" },
+				{ "seat_number": 10, "gender": "", "is_female_only":true }
+			],
 			"amenities": [
 				"WiFi",
 				"AC",
@@ -52,7 +88,19 @@
 			"date": "2024-01-16",
 			"busNumber": "BUS321",
 			"price": 40.00,
-			"availableSeats": 10,
+			"availableSeats": 7,
+			"seatsLayout":[
+				{ "seat_number": 1, "gender": "female" },
+				{ "seat_number": 2, "gender": "", "is_female_only":true },
+				{ "seat_number": 3, "gender": "female" },
+				{ "seat_number": 4, "gender": "female" },
+				{ "seat_number": 5, "gender": "", "is_female_only":false },
+				{ "seat_number": 6, "gender": "", "is_female_only":false },
+				{ "seat_number": 7, "gender": "", "is_female_only":false },
+				{ "seat_number": 8, "gender": "", "is_female_only":false },
+				{ "seat_number": 9, "gender": "", "is_female_only":false },
+				{ "seat_number": 10, "gender": "", "is_female_only":false }
+			],
 			"amenities": [
 				"WiFi",
 				"AC",

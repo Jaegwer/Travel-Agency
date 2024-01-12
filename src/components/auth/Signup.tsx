@@ -10,10 +10,11 @@ const SignUpPage: React.FC = () => {
   const { signUp } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [selectedGender, setSelectedGender] = useState("male");
   const navigate = useNavigate();
   const handleSignUp = async () => {
     try {
-      await signUp(email, password);
+      await signUp(email, password,selectedGender);
       navigate("/login");
     } catch (error) {
       console.error("Error signing up:");
@@ -23,10 +24,11 @@ const SignUpPage: React.FC = () => {
     e.preventDefault();
     handleSignUp();
   };
-  const [selectedGender, setSelectedGender] = useState("male");
+
 
   const handleGenderChange = (genderId: string) => {
     setSelectedGender(genderId);
+
   };
   return (
     <div className="w-1/2 mx-auto  flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 auth">
@@ -127,6 +129,7 @@ const SignUpPage: React.FC = () => {
                           id={genderMethod.id}
                           name="notification-method"
                           type="radio"
+						  value={selectedGender}
                           checked={selectedGender === genderMethod.id}
                           onChange={() => handleGenderChange(genderMethod.id)}
                           className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"

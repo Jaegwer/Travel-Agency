@@ -3,3 +3,6 @@
 	background-color: rgba(17, 24, 39, 1);
 	isolation: isolate;
 }
+.form-element{
+	height: 49vw;
+}

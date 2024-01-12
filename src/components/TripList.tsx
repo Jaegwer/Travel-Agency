@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
+import "./TripList.css";
 const TicketList = () => {
   const [filteredTickets, setFilteredTickets] = useState<any[]>([]);
+  const [selectedTicket, setSelectedTicket] = useState<any | null>(null);
   const navigate = useNavigate();
   useEffect(() => {
     const storedFilteredTickets = localStorage.getItem("filteredTickets");
@@ -14,17 +17,24 @@ const TicketList = () => {
     setFilteredTickets([]);
     navigate("/");
   };
+  const handleSelect = (ticket: any) => {
+    setSelectedTicket(ticket);
+	Cookies.set("selectedTicket", JSON.stringify(ticket));
+
+    // Navigate to the new component with the selected ticket data
+    navigate("/TripDetails");
+    // Navigate to the new component with the selected ticket data
+
+  };
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
+    <div className="px-4 sm:px-6 lg:px-8 main-table">
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-base font-semibold leading-6 text-white">
-            Plans
+            Tickets
           </h1>
           <p className="mt-2 text-sm text-white">
-            Your team is on the{" "}
-            <strong className="font-semibold text-white">Startup</strong> plan.
-            The next payment of $80 will be due on August 4, 2022.
+            {filteredTickets.length} tickets found according to the search!
           </p>
         </div>
         <div className="mt-4 sm:ml-16 sm:mt-0 sm:flex-none">
@@ -232,9 +242,9 @@ const TicketList = () => {
                   }
                 >
                   <button
+				   onClick={() => handleSelect(ticket)}
                     type="button"
-                    className="inline-flex items-center rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-white hover:bg-white disabled:cursor-not-allowed disabled:opacity-30 disabled:hover:bg-white"
-                    disabled={ticket.isCurrent}
+                    className="inline-flex items-center rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-white hover:bg-indigo-600 hover:text-white transition ease-in-out delay-150"
                   >
                     Select<span className="sr-only">, {ticket.name}</span>
                   </button>

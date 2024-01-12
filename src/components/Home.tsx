@@ -66,7 +66,7 @@ function Home() {
     console.log(filteredTickets);
   };
   return (
-    <div className="relative isolate bg-gray-900">
+    <div className="relative isolate bg-gray-900 form-element">
       <button
         onClick={handleSignOut}
         type="button"

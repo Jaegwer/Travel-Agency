@@ -2,11 +2,12 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 interface AuthContextProps {
   user: firebase.User | null;
   signIn: (email: string, password: string) => Promise<void>;
-  signUp: (email: string, password: string) => Promise<void>;
+  signUp: (email: string, password: string, gender:string) => Promise<void>;
   signOut: () => Promise<void>;
 }
 
@@ -19,8 +20,21 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => 
     await firebase.auth().signInWithEmailAndPassword(email, password);
   };
 
-  const signUp = async (email: string, password: string) => {
-    await firebase.auth().createUserWithEmailAndPassword(email, password);
+  const signUp = async (email: string, password: string, gender: string) => {
+    // Create user with email and password
+    const userCredential = await firebase.auth().createUserWithEmailAndPassword(email, password);
+
+    // Access the UID of the created user
+    const uid = userCredential.user?.uid;
+
+    // Add user data to Firestore
+    if (uid) {
+      await firebase.firestore().collection('users').doc(uid).set({
+        email: email,
+        gender: gender,
+        // Add other user properties as needed
+      });
+    }
   };
 
   const signOut = async () => {
