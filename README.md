@@ -1,7 +1,10 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+#Account
+user@test.com
+12345
+or create one
 ## Techs
 
 headlessui/react: ^1.7.18,
