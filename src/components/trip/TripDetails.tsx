@@ -159,7 +159,6 @@ const HandleCheckout=(selectedSeats : any) => {
           toast.success(`Seat ${seatNumber} selected.`);
         }
       }
-	  console.log(selectedSeats);
 
     } else {
       toast.error("Maximum seat limit reached.");

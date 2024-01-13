@@ -53,7 +53,8 @@ const Payment = () => {
   const handleCardNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setCardName(event.target.value);
   };
-const handlePayment= async () =>{
+const handlePayment= async (e: React.FormEvent<HTMLFormElement>) =>{
+	e.preventDefault();
 	Cookies.remove("selectedTicket");
 	localStorage.removeItem("filteredTickets");
 	setLoading(true);
@@ -68,13 +69,14 @@ const handlePayment= async () =>{
   return (
     <div>
       <main className="flex min-h-screen flex-col items-center justify-between p-6 lg:p-24">
-        <form className="bg-white w-full max-w-3xl mx-auto px-4 lg:px-6 py-8 shadow-md rounded-md flex flex-col lg:flex-row">
+        <form onSubmit={handlePayment} className="bg-white w-full max-w-3xl mx-auto px-4 lg:px-6 py-8 shadow-md rounded-md flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/2 lg:pr-8 lg:border-r-2 lg:border-slate-300">
             <div className="mb-4">
               <label className="text-neutral-800 font-bold text-sm mb-2 block">
                 Card number:
               </label>
               <input
+			  required
                 id="cardNumber"
                 type="text"
                 className="flex h-10 w-full rounded-md border-2 bg-background px-4 py-1.5 text-lg ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 undefined"
@@ -90,6 +92,7 @@ const handlePayment= async () =>{
                   Exp. date:
                 </label>
                 <input
+				required
                   id="expDate"
                   type="text"
                   className="flex h-10 w-full rounded-md border-2 bg-background px-4 py-1.5 text-lg ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 undefined"
@@ -104,6 +107,7 @@ const handlePayment= async () =>{
                   CCV:
                 </label>
                 <input
+				required
                   id="ccvNumber"
                   type="text"
                   className="flex h-10 w-full rounded-md border-2 bg-background px-4 py-1.5 text-lg ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 undefined"
@@ -119,6 +123,7 @@ const handlePayment= async () =>{
                 Cardholder name:
               </label>
               <input
+			  required
                 id="cardName"
                 type="text"
                 className="flex h-10 w-full rounded-md border-2 bg-background px-4 py-1.5 text-lg ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:border-purple-600 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 undefined"
@@ -128,8 +133,8 @@ const handlePayment= async () =>{
               />
             </div>
             <button
-			onClick={handlePayment}
-              type="button"
+
+              type="submit"
               className="inline-flex items-center gap-x-2 rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Confirm Payment
