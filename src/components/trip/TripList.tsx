@@ -21,13 +21,14 @@ const TicketList = () => {
     setSelectedTicket(ticket);
 	Cookies.set("selectedTicket", JSON.stringify(ticket));
 
-    // Navigate to the new component with the selected ticket data
+
     navigate("/TripDetails");
-    // Navigate to the new component with the selected ticket data
+
 
   };
   return (
     <div className="px-4 sm:px-6 lg:px-8 main-table">
+
       <div className="sm:flex sm:items-center">
         <div className="sm:flex-auto">
           <h1 className="text-base font-semibold leading-6 text-white">
@@ -187,7 +188,9 @@ const TicketList = () => {
               </th>
             </tr>
           </thead>
+		  {filteredTickets.length > 0 ? (
           <tbody>
+
             {filteredTickets.map((ticket, ticketIdx) => (
               <tr key={ticket.id}>
                 <td
@@ -227,14 +230,14 @@ const TicketList = () => {
                     "border-t border-white px-3 py-3.5 text-sm text-white"
                   }
                 >
-                  <div className="hidden sm:block">{ticket.price}$</div>
+                  <div className="">{ticket.price}$</div>
                 </td>
                 <td
                   className={
                     "border-t border-white px-3 py-3.5 text-sm text-white"
                   }
                 >
-                  <div className="hidden sm:block">{ticket.availableSeats}</div>
+                  <div className="">{ticket.availableSeats}</div>
                 </td>
                 <td
                   className={
@@ -255,6 +258,11 @@ const TicketList = () => {
               </tr>
             ))}
           </tbody>
+		  ) : (
+			<div>
+			<p className="text-white">No tickets found.</p>
+		  </div>
+		)}
         </table>
       </div>
     </div>

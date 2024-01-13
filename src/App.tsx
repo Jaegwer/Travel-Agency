@@ -6,8 +6,9 @@ import PrivateRoute from './PrivateRoute';
 import Login from './components/auth/Login';
 import SignUp from './components/auth/Signup';
 import Home from './components/Home'
-import TripList from './components/TripList'
-import TripDetails from './components/TripDetails'
+import TripList from './components/trip/TripList'
+import TripDetails from './components/trip/TripDetails'
+import Payment from './components/Payment'
 
 const App: React.FC = () => {
   return (
@@ -18,6 +19,7 @@ const App: React.FC = () => {
           <Route path="/signup" element={<SignUp/>} />
           <Route path="/TripList" element={<TripList />}  />
           <Route path="/TripDetails" element={<TripDetails />}  />
+          <Route path="/Payment" element={<Payment />}  />
 		  <Route  path='/' element={<PrivateRoute/>}>
             <Route  path='/' element={<Home/>}/>
           </Route>

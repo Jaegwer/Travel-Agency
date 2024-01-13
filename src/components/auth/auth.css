@@ -7,3 +7,13 @@
 .card{
 	backdrop-filter: blur(10px);
 }
+@media screen and (max-width: 600px) {
+	.auth{
+		height: 185vw;
+	}
+  }
+  @media (max-width:900px) and (min-width: 768px ) {
+	.auth{
+		height: 70vw;
+	}
+  }

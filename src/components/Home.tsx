@@ -44,7 +44,7 @@ function Home() {
     };
 
     fetchData();
-  }, [searchParams]); // Re-run whenever searchParams change
+  }, [searchParams]);
   const handleForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleSearch();
@@ -63,7 +63,6 @@ function Home() {
     } else {
       toast.error("No tickets found");
     }
-    console.log(filteredTickets);
   };
   return (
     <div className="relative isolate bg-gray-900 form-element">

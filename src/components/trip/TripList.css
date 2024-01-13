@@ -1,0 +1,13 @@
+.main-table{
+	height: 50vw;
+}
+@media screen and (max-width: 600px) {
+	.main-table{
+		height: 115vw;
+	}
+  }
+  @media (max-width:900px) and (min-width: 768px ) {
+	.main-table{
+		height: 65vw;
+	}
+  }

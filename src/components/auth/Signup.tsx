@@ -172,13 +172,13 @@ const SignUpPage: React.FC = () => {
             className="text-sm font-semibold leading-6 text-gray-700"
           >
             <p>
-              Already have an account? <Link className="underline" to="/login">Login</Link>
+              Already have an account? <Link className="underline transition ease-in-out delay-150 hover:text-white" to="/login">Login</Link>
             </p>
           </button>
           <button
             onClick={handleSignUp}
             type="submit"
-            className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-gray-700 shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+            className="rounded-md bg-indigo-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
           >
             SignUp
           </button>

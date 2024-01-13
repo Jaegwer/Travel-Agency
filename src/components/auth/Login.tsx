@@ -84,14 +84,14 @@ const LoginPage: React.FC = () => {
               </div>
 
               <div>
-                <button className="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm font-semibold leading-6 text-gray-700 shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
+                <button className="flex w-full justify-center rounded-md bg-indigo-500 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500">
                   Sign in
                 </button>
               </div>
             </div>
 
-            <p className="mt-10 text-center text-sm text-gray-400">
-              Not a member? <Link to="/signup">Sign Up</Link>
+            <p className="mt-10 text-center text-sm text-white">
+              Not a member? <Link className="hover:text-sky-400 transition ease-in-out delay-150" to="/signup">Sign Up</Link>
             </p>
           </div>
         </div>
