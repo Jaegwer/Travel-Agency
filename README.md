@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Techs
+
+headlessui/react: ^1.7.18,
+heroicons/react: ^2.1.1,
+types/firebase: ^3.2.1,
+firebase: ^10.7.1,
+js-cookie: ^3.0.5,
+react-spinners: ^0.13.8,
+react-toastify: ^9.1.3,
+typescript: ^4.9.5,
+react-router-dom: ^6.21.1,
+react-firebase-hooks: ^5.1.1,
+
 ## Available Scripts
 
 In the project directory, you can run:
